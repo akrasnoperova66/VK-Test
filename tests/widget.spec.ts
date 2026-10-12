@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import {WidgetPage} from "./widget.page";
 
 test.describe('Uchi.ru widget ', () => {

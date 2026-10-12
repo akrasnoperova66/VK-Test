@@ -17,7 +17,7 @@ export class WidgetPage {
     constructor(protected page: Page) {}
 
     wrapper() {
-        return this.page.locator(WidgetPage.selector.WRAPPER)
+        return this.page.locator(WidgetPage.selector.WRAPPER).all();
     }
 
     async openWidget() {
@@ -25,7 +25,7 @@ export class WidgetPage {
     }
 
     async getPopularArticles() {
-        return this.wrapper().locator(WidgetPage.selector.ARTICLE_POPULAR_LIST_ITEM).all()
+        return this.wrapper().locator(WidgetPage.selector.ARTICLE_POPULAR_LIST_ITEM).all();
     }
 
     async clickWriteToUs() {
@@ -37,7 +37,7 @@ export class WidgetPage {
     }
 
     getWidgetBody() {
-        return this.page.locator(WidgetPage.selector.WIDGET_BODY);
+        return this.page.locator(WidgetPage.selector.WIDGET_BODY).all();
     }
 }
 
